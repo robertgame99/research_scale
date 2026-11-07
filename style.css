@@ -1,0 +1,215 @@
+/* ==========================================
+   🌐 基本重設與全局淺色底樣式
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Apple LiGothic Medium", "Microsoft JhengHei", sans-serif;
+}
+
+body {
+    background-color: #F0F4F8; /* 高級冰川藍淺色底 */
+    color: #1F2937;            /* 深灰字確保可讀性 */
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================
+   🎯 淺色底專用：頂部標題區
+   ========================================== */
+.header-section {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.header-tag {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #4B5563; 
+    margin-bottom: 12px;
+}
+
+.header-section h1 {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #0F172A; /* 墨黑深海藍 */
+    line-height: 1.1;
+}
+
+.header-section h1 span {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #0F172A; /* 墨黑深海藍 */
+    line-height: 1.1;
+}
+
+.header-section p {
+    font-size: 18px;
+    font-weight: 800;
+    color: #00875A; /* 加深翠綠，對比清晰 */
+    letter-spacing: 4px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.header-section p::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 6px;
+    background: linear-gradient(90deg, #00B359, #E60067);  /*呼應下方的撞色線 */
+    border-radius: 2px;
+} 
+
+/* ==========================================
+   📦 2x2 完美的對稱網格排版
+   ========================================== */
+.contrast-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 強制上二下二 */
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 卡片基礎：邊框自帶雙色高飽和度漸層 */
+.contrast-card {
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+    border-radius: 24px;
+    padding: 4px; 
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+/* 卡片內部：極致純白與外框線條撞色 */
+.card-inner {
+    background: #FFFFFF; 
+    border-radius: 20px;
+    padding: 45px 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景巨型巨型數字 */
+.card-num  {
+    position: absolute;
+    right: -15px;      /* 稍微往右側延伸，增加破格排版感 */
+    top: -25px;
+    font-size: 140px;  /* 放大字體，讓深色更具張力 */
+    font-weight: 900;
+    opacity: 0.45;     /* 提高透明度，使其深色完全顯現 */
+    line-height: 1;
+    z-index: 0;        /* 確保在文字後方，不影響閱讀 */
+}
+
+/* 標籤小方塊 */
+.card-badge {
+    align-self: flex-start;
+    padding: 6px 16px;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+/* 卡片主標題：採用飽和寶石色 */
+.contrast-card h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.contrast-card p {
+    font-size: 26px;
+    line-height: 1.8;
+    color: #4B5563; 
+    margin-bottom: 35px;
+    font-family: system-ui, sans-serif;
+}
+
+/* 按鈕核心樣式 */
+.action-btn {
+    margin-top: auto;
+    text-decoration: none;
+    padding: 14px 30px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* 懸停時卡片向上浮起浮起 */
+.contrast-card:hover {
+    transform: translateY(-10px) scale(1.01);
+}
+
+/* ==========================================
+   🎨 淺色底專用：四大項目高對比互補色
+   ========================================== */
+
+/* 大項 1：翡翠綠 X 艷麗粉 */
+.color-green-pink { --c1: #00B359; --c2: #E60067; }
+.color-green-pink .card-num { color: #00B359; }
+.color-green-pink .card-badge { background: #00B359; color: #fff; }
+.color-green-pink h2 { color: #00B359; }
+.color-green-pink .action-btn { border: 2px solid #E60067; color: #E60067; }
+.color-green-pink .action-btn:hover { background: #E60067; color: #fff; box-shadow: 0 10px 20px rgba(230, 0, 103, 0.25); }
+.color-green-pink:hover { box-shadow: 0 20px 40px rgba(0, 179, 89, 0.15); }
+
+/* 大項 2：琥珀橙 X 寶石藍 */
+.color-orange-blue { --c1: #E64A00; --c2: #0099B3; }
+.color-orange-blue .card-num { color: #E64A00; }
+.color-orange-blue .card-badge { background: #E64A00; color: #fff; }
+.color-orange-blue h2 { color: #E64A00; }
+.color-orange-blue .action-btn { border: 2px solid #0099B3; color: #0099B3; }
+.color-orange-blue .action-btn:hover { background: #0099B3; color: #fff; box-shadow: 0 10px 20px rgba(0, 153, 179, 0.25); }
+.color-orange-blue:hover { box-shadow: 0 20px 40px rgba(230, 74, 0, 0.15); }
+
+/* 大項 3：芥末黃 X 皇家紫 */
+.color-yellow-purple { --c1: #B3D900; --c2: #7A00E6; }
+.color-yellow-purple .card-num { color: #7A00E6; }
+.color-yellow-purple .card-badge { background: #7A00E6; color: #fff; }
+.color-yellow-purple h2 { color: #7A00E6; }
+.color-yellow-purple .action-btn { border: 2px solid #7A00E6; color: #7A00E6; }
+.color-yellow-purple .action-btn:hover { background: #7A00E6; color: #fff; box-shadow: 0 10px 20px rgba(122, 0, 230, 0.25); }
+.color-yellow-purple:hover { box-shadow: 0 20px 40px rgba(122, 0, 230, 0.15); }
+
+/* 大項 4：深烈紅 X 深青綠 */
+.color-red-cyan { --c1: #D9002B; --c2: #00A3A3; }
+.color-red-cyan .card-num { color: #D9002B; }
+.color-red-cyan .card-badge { background: #D9002B; color: #fff; }
+.color-red-cyan h2 { color: #D9002B; }
+.color-red-cyan .action-btn { border: 2px solid #00A3A3; color: #00A3A3; }
+.color-red-cyan .action-btn:hover { background: #00A3A3; color: #000; box-shadow: 0 10px 20px rgba(0, 163, 163, 0.25); }
+.color-red-cyan:hover { box-shadow: 0 20px 40px rgba(217, 0, 43, 0.15); }
+
+/* ==========================================
+   📱 響應式佈局手機優化
+   ========================================== */
+@media (max-width: 850px) {
+    .contrast-grid-layout {
+        grid-template-columns: 1fr; /* 平板手機端降為一欄，防擠壓 */
+        gap: 25px;
+    }
+    .header-section h1 { font-size: 36px; }
+    .header-section p { font-size: 15px; letter-spacing: 2px; }
+}

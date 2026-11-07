@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKT-C </title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff; /* 純白背景 */
+            color: #191970;            /* 午夜藍文字 */
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* 控制整體左右寬度的核心（數值越小，左右空白越多） */
+        .container {
+            width: 100%;
+            max-width: 1000px; /* 黃金閱讀寬度 */
+        }
+
+        /* 主標題：完美置中 */
+        .title {
+            position: relative;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 45px 0; /* 留出空間給漸層線 */
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00B359, #E60067); /* 標題下方漸層線 */
+            border-radius: 2px;
+        }
+
+        /* 🌟 新增的副標題簡介樣式（16px、置中、深灰藍、上下留空行） */
+        .subtitle-intro {
+            font-size: 18px;
+            text-align: center;      /* 配合主標題，維持置中 */
+            color: #555577;          /* 稍微柔和的午夜藍深灰，做出層次感 */
+            line-height: 1.6;
+            margin: 0 0 50px 0;      /* 👈 下方留空行 50px，與第一個大項目完美隔開 */
+            font-style: italic;      /* 可選：微斜體增加文青感，若不需要可刪除此行 */
+        }
+
+        /* 項目大標題（18px 粗體、午夜藍、靠左） */
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #191970;
+            margin: 0 0 10px 0;
+            text-align: left;
+        }
+
+        /* 項目內文（16px、深灰藍、靠左） */
+        .text-content {
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.8;
+            color: #4a4a6a;
+            margin: 0 0 25px 0; 
+            padding: 0 5px;
+        }
+
+        /* 美化後的 <hr> 漸層分割線 */
+        hr {
+            border: none;                     
+            height: 1px;                      
+            background: linear-gradient(90deg, rgba(0,179,89,0.2), rgba(230,0,103,0.6), rgba(0,179,89,0.2)); 
+            margin: 35px 0;                   
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 全網頁主標題 -->
+        <h1 class="title">SKT-C </h1>
+
+        <!-- 🌟 新增的一行簡介（置中、大小 16px） -->
+        <p class="subtitle-intro">Chinese Version of the Stroke Knowledge Test (SKT-C)</p>
+
+        <!-- 項目 1 -->
+        <h2 class="item-title">Overview</h2>
+        <p class="text-content">
+            The Chinese Version of the Stroke Knowledge Test (SKT-C) was translated, culturally adapted, and validated to assess stroke-related knowledge among patients with hypertension in Taiwan. The instrument evaluates patients' understanding of stroke, including risk factors, warning signs, prevention, treatment, and recovery. It provides healthcare professionals with a structured approach to identifying knowledge gaps and assessing educational needs related to stroke prevention.
+        </p>
+
+        <hr>
+
+        <!-- 項目 2 -->
+        <h2 class="item-title">Translation and Psychometric Validation</h2>
+        <p class="text-content">
+            The SKT-C was developed through a systematic translation and cross-cultural adaptation process based on the original Stroke Knowledge Test (SKT), developed by Dr. Karen Sullivan. Written permission to translate the SKT was granted by Dr. Sullivan in June 2018.</p>
+        <p class="text-content">
+            The translation procedure followed Brislin's guidelines and included forward translation, back-translation, expert review, and assessment of face validity.
+Psychometric evaluation was conducted among 200 patients with hypertension recruited from an outpatient department of a regional hospital in Taiwan. An additional assessment of test-retest reliability was conducted among 30 participants after a two-week interval.</p>
+        <p class="text-content">
+            The final Chinese version retained all 20 items of the original instrument.</p>
+        
+        <hr>
+
+        <!-- 項目 3 -->
+        <h2 class="item-title">Instrument Structure and Scoring</h2>
+        <p class="text-content">
+            The SKT-C consists of 20 multiple-choice questions assessing stroke-related knowledge. Each question provides five response options, including a "do not know" option. Correct responses are scored as 1 point, while incorrect and "do not know" responses are scored as 0 points. Total scores range from 0 to 20, with higher scores indicating greater stroke-related knowledge.
+        </p>
+
+        <hr>
+
+        <!-- 項目 4 -->
+        <h2 class="item-title">Reliability and Validity</h2>
+        <p class="text-content">
+            The SKT-C demonstrated satisfactory content validity, with item-level content validity indices (I-CVI) ranging from 0.88 to 1.00 and a scale-level content validity index (S-CVI/Ave) of 0.97. The Kuder–Richardson Formula 20 (KR-20) coefficient was 0.62, indicating modest internal consistency, while the test-retest reliability coefficient was 0.77, suggesting acceptable temporal stability. Known-group validity was supported by significant differences in stroke knowledge according to educational attainment (F = 21.21, p < 0.001). Overall, these findings provide preliminary support for the reliability and validity of the SKT-C among patients with hypertension.
+        </p>    
+        <hr>
+
+        <!-- 項目 5 -->
+        <h2 class="item-title">Research Applications</h2>
+        <p class="text-content">
+            The SKT-C may be used to assess stroke-related knowledge among patients with hypertension, identify knowledge gaps regarding stroke risk factors and warning signs, and evaluate the effectiveness of stroke prevention education programs. It may also support patient education and health promotion interventions, as well as research examining factors associated with stroke knowledge in clinical and community settings. The instrument is particularly relevant to studies focusing on hypertension management, stroke prevention, and patient-centered health education.
+        </p>
+
+        <hr>
+
+        <!-- 項目 6 -->
+        <h2 class="item-title">Original Publication</h2>
+        <p class="text-content">
+            Wang, P.-Y., Chen, Y.-W., & Lin, M.-H. (2023). Translation and validation of the Chinese version of the stroke knowledge test for the hypertension patient. Scientific Reports, 13, Article 17446.
+DOI: https://doi.org/10.1038/s41598-023-44682-7</p>
+
+        <p class="text-content">
+            We gratefully acknowledge Dr. Karen Sullivan, the original developer of the Stroke Knowledge Test (SKT), for granting permission to translate the instrument into Chinese in June 2018.
+        </p>
+
+        <hr>
+
+        <!-- 項目 8 -->
+        <h2 class="item-title">Instrument Access and Permission</h2>
+        <p class="text-content">
+            Researchers interested in using the Chinese Version of the Stroke Knowledge Test (SKT-C) for academic research or educational purposes may submit requests to our research team through:</p>
+        <p class="text-content">Dr. Mei-Hsiang Lin</p>
+        <p class="text-content">National Taipei University of Nursing and Health Sciences, Taiwan</p>
+        <p class="text-content">Email: mhlin5452@gmail.com</p>
+        <p class="text-content">In accordance with the arrangement agreed upon with Dr. Karen Sullivan, our research team handles requests to use the SKT-C. Inquiries concerning the original SKT or other language versions will be referred to Dr. Sullivan, the original test developer.</p>
+        <p class="text-content">Researchers using the SKT-C are requested to cite the SKT-C validation publication listed above and appropriately acknowledge and cite the original Stroke Knowledge Test and its developer, Dr. Karen Sullivan.
+
+        </p>
+        <hr> 
+    </div>
+
+</body>
+</html>

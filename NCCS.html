@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCCS </title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff; /* 純白背景 */
+            color: #191970;            /* 午夜藍文字 */
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* 控制整體左右寬度的核心（數值越小，左右空白越多） */
+        .container {
+            width: 100%;
+            max-width: 1000px; /* 黃金閱讀寬度 */
+        }
+
+        /* 主標題：完美置中 */
+        .title {
+            position: relative;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 45px 0; /* 留出空間給漸層線 */
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #00B359, #E60067); /* 標題下方漸層線 */
+            border-radius: 2px;
+        }
+
+        /* 🌟 新增的副標題簡介樣式（16px、置中、深灰藍、上下留空行） */
+        .subtitle-intro {
+            font-size: 18px;
+            text-align: center;      /* 配合主標題，維持置中 */
+            color: #555577;          /* 稍微柔和的午夜藍深灰，做出層次感 */
+            line-height: 1.6;
+            margin: 0 0 50px 0;      /* 👈 下方留空行 50px，與第一個大項目完美隔開 */
+            font-style: italic;      /* 可選：微斜體增加文青感，若不需要可刪除此行 */
+        }
+
+        /* 項目大標題（18px 粗體、午夜藍、靠左） */
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #191970;
+            margin: 0 0 10px 0;
+            text-align: left;
+        }
+
+        /* 項目內文（16px、深灰藍、靠左） */
+        .text-content {
+            font-size: 16px;
+            text-align: left;
+            line-height: 1.8;
+            color: #4a4a6a;
+            margin: 0 0 25px 0; 
+            padding: 0 5px;
+        }
+
+        /* 美化後的 <hr> 漸層分割線 */
+        hr {
+            border: none;                     
+            height: 1px;                      
+            background: linear-gradient(90deg, rgba(0,179,89,0.2), rgba(230,0,103,0.6), rgba(0,179,89,0.2)); 
+            margin: 35px 0;                   
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 全網頁主標題 -->
+        <h1 class="title">NCCS </h1>
+
+        <!-- 🌟 新增的一行簡介（置中、大小 16px） -->
+        <p class="subtitle-intro">Nursing Cultural Competence Scale (NCCS)</p>
+
+        <!-- 項目 1 -->
+        <h2 class="item-title">Overview</h2>
+        <p class="text-content">
+            The Nursing Cultural Competence Scale (NCCS) was developed to assess cultural competence among clinical nurses. The instrument addresses nurses' awareness of cultural differences, their ability to provide culturally appropriate nursing care, their use of cultural resources, and their capacity for self-directed cultural learning.
+        </p>
+
+        <hr>
+
+        <!-- 項目 2 -->
+        <h2 class="item-title">Development and Psychometric Validation</h2>
+        <p class="text-content">
+            The NCCS was developed and validated in Taiwan using a two-phase research design. The initial item pool was informed by in-depth interviews with 30 nurses and evaluated by a panel of seven experts. Psychometric testing was subsequently conducted among 246 clinical nurses.
+The final 19-item scale comprises four dimensions: Cultural Awareness Ability, Cultural Action Ability, Cultural Resources Application Ability, and Self-Learning Cultural Ability.
+
+        </p>
+
+        <hr>
+
+        <!-- 項目 3 -->
+        <h2 class="item-title">Reliability and Validity</h2>
+        <p class="text-content">
+            The four-factor structure explained 62.0% of the total variance. The NCCS demonstrated satisfactory internal consistency (Cronbach's α = 0.88) and test-retest reliability (r = 0.70), supporting its reliability for assessing cultural competence among clinical nurses.
+        </p>
+
+        <hr>
+
+        <!-- 項目 4 -->
+        <h2 class="item-title">Research Applications</h2>
+        <p class="text-content">
+            The NCCS may be used to assess cultural competence among clinical nurses, identify professional development needs, and evaluate educational initiatives designed to strengthen culturally responsive nursing care. It may also support cross-cultural nursing research and the assessment of cultural competence in diverse healthcare settings.
+        </p>
+
+        <hr>
+
+        <!-- 項目 5 -->
+        <h2 class="item-title">Original Publication</h2>
+        <p class="text-content">
+            Lin, M. H., Chang, T. H., Lee, Y. H., Wang, P. Y., Lin, L. H., & Hsu, H. C. (2019). Developing and validating the Nursing Cultural Competence Scale in Taiwan. PLOS ONE, 14(8), e0220944.
+DOI: https://doi.org/10.1371/journal.pone.0220944
+
+        </p>
+
+        <hr>
+
+        <!-- 項目 6 -->
+        <h2 class="item-title">Instrument Access</h2>
+        <p class="text-content">
+            For instrument access and research inquiries, please refer to the Contact section on the Research Instruments homepage.
+        </p>
+    </div>
+
+</body>
+</html>
