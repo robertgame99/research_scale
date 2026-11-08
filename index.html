@@ -8,18 +8,57 @@
 </head>
 <body>
 
-    <!-- 重新設計的淺色底專用高對比標題區 -->
-     
-    <header class="header-section">
-        <div class="header-tag">Mei-Hsiang Lin, EdD, RN National Taipei University of Nursing and Health Sciences, Taiwan </div>
-        <div class="header-tag">Measurement for Better Nursing and Health Care</div>
-        <h1>Research <span> Instruments</span></h1>
-        <p>My research focuses on the development, cross-cultural adaptation, and psychometric validation of instruments relevant to nursing practice, healthcare education, and patient-centered care. This website introduces four research instruments and provides information about their psychometric properties, research applications, and original publications.</p>
-    </header>
+    <div class="banner-container">
+        <!-- 頂部教授資訊：包含左側垂直綠色直線 -->
+        <div class="profile-container">
+            <div class="profile-info">
+                <div class="profile-name">Mei-Hsiang Lin, EdD, RN</div>
+                <div class="profile-title">Professor, School of Nursing</div>
+                <div class="profile-org">National Taipei University of Nursing and Health Sciences, Taiwan</div>
+            </div>
+        </div>
 
-    <p style="font-size: 30px; text-align: center; margin: 20px 0;color: #191970">
-    Four instruments for nursing practice, education, and research
-</p>
+        <!-- 底部核心標題：完全靠左對齊 -->
+        <div class="main-content">
+            <h1 class="main-title">Research Instruments</h1>
+            <div class="sub-title">Measurement for Better Nursing and Health Care</div>
+        </div>
+
+        <!-- 修正後完美還原的滿版多層次波浪線條 (SVG) -->
+        
+        <svg class="wave-background" viewBox="0 0 1200 250" fill="none" xmlns="http://w3.org" preserveAspectRatio="none">
+            <!-- 漣漪第 1 層 (底層：超輕薄淡藍托底) -->
+            <path d="M0 232 C280 185, 480 242, 780 236 C980 228, 1100 216, 1200 208 V250 H0 Z" fill="url(#wave-gradient-light)" opacity="0.15"/>
+            
+            <!-- 漣漪第 2 層 (中底層：微調起伏，創造若隱若現的交織) -->
+            <path d="M0 236 C310 192, 510 246, 810 233 C1010 220, 1110 207, 1200 198 V250 H0 Z" fill="url(#wave-gradient-medium)" opacity="0.25"/>
+            
+            <!-- 漣漪第 3 層 (中高層：絲帶般的溫和層次) -->
+            <path d="M0 241 C340 198, 530 248, 840 230 C1040 212, 1140 197, 1200 188 V250 H0 Z" fill="url(#wave-gradient-medium)" opacity="0.35"/>
+            
+            <!-- 漣漪第 4 層 (頂層：最上方的波浪邊緣，保持半透明以消除強烈感) -->
+            <path d="M0 246 C370 205, 560 250, 870 226 C1060 206, 1150 191, 1200 180 V250 H0 Z" fill="url(#wave-gradient-dark)" opacity="0.45"/>
+            
+            <!-- 漸層顏色定義（全面調低色彩飽和度與亮度，回歸自然水藍） -->
+            <defs>
+                <linearGradient id="wave-gradient-light" x1="0" y1="250" x2="1200" y2="150" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#f0f9ff" />
+                    <stop offset="60%" stop-color="#e0f2fe" />
+                    <stop offset="100%" stop-color="#bae6fd" />
+                </linearGradient>
+                <linearGradient id="wave-gradient-medium" x1="0" y1="250" x2="1200" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#e0f2fe" />
+                    <stop offset="50%" stop-color="#bae6fd" />
+                    <stop offset="100%" stop-color="#7dd3fc" />
+                </linearGradient>
+                <linearGradient id="wave-gradient-dark" x1="0" y1="250" x2="1200" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#bae6fd" />
+                    <stop offset="50%" stop-color="#7dd3fc" />
+                    <stop offset="100%" stop-color="#38bdf8" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
 
 
     <!-- 2x2 上二下二對稱網格佈局 -->
@@ -64,18 +103,35 @@
                 <span class="card-num">04</span>
                 <div class="card-badge">SKT-C</div>
                 <h2>Chinese Version of the Stroke Knowledge Test</h2>
-                <p>20 items · Knowledge Assessment</p>
+                <p>14 items</p>
                 <a href="SKT-C.html" class="action-btn">Learn More</a>
             </div>
         </div>
 
     </div>
 
- <p style="font-size: 20px; text-align: center; margin: 20px 0;color: #611057">
-    If you require more detailed scale information, please fill out the form and we will send it to you via email.
-    <a href="https://forms.gle/aVVgJao4hKjNyvbj9" class="action-btn">Fill out the form</a>
-</p>
 
+ <!-- 2. 下方按鈕呼籲區塊 (CTA Section) -->
+    <div class="cta-container">
+        <a href="https://forms.gle/aVVgJao4hKjNyvbj9" class="cta-button">
+            <!-- 純 SVG 繪製的文件圖示 -->
+            <svg class="icon-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            
+            <span class="btn-text">Request Instrument Access</span>
+            
+            <!-- 純 SVG 繪製的向右箭頭 -->
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+    </div>
 
 </body>
 </html>
