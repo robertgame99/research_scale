@@ -331,21 +331,6 @@
     text-decoration: underline;
 }
 
-/* 手機版：改為單欄 */
-@media (max-width: 600px) {
-    .info-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        width: calc(100% - 30px);
-        min-height: auto;
-    }
-
-    .info-card {
-        min-height: 180px;
-    }
-}
-
-
 /* ==========================================================================
    2. 下方按鈕呼籲區塊 (CTA Section)
    ========================================================================== */
