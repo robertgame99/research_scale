@@ -396,16 +396,93 @@
     transform: translateX(3px);
 }
 
-/* 手機版：改為單欄 */
-@media (max-width: 600px) {
+/* ==========================================
+   📱 平板與手機版響應式修正 (RWD)
+   ========================================== */
+
+/* 平板尺寸以下 (768px 以下) */
+@media (max-width: 768px) {
+    /* 1. 橫幅內距與標題縮小 */
+    .banner-container {
+        padding: 30px 24px;
+        min-height: auto;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .sub-title {
+        font-size: 18px;
+    }
+
+    /* 2. 第一組卡片網格：從 2 欄改為單欄，並調整間距 */
+    .contrast-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 20px;
+    }
+
+    /* 卡片內部空間與字體縮小 */
+    .card-inner {
+        padding: 30px 24px;
+    }
+
+    .card-num {
+        font-size: 100px;
+        right: -10px;
+        top: -15px;
+    }
+
+    .card-badge {
+        font-size: 20px;
+        padding: 4px 14px;
+        margin-bottom: 16px;
+    }
+
+    .contrast-card h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .contrast-card p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    /* 3. 第二組資訊網格：提早改為單欄並放寬左右邊距 */
     .info-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        width: calc(100% - 30px);
+        width: calc(100% - 40px);
         min-height: auto;
     }
 
     .info-card {
-        min-height: 180px;
+        min-height: auto;
+    }
+
+    /* 允許底部資訊在螢幕極窄時自動換行，避免文字被切掉 */
+    .info-card__footer {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .info-card__footer p {
+        white-space: normal;
+    }
+
+    /* 4. 底部 CTA 按鈕區塊調整 */
+    .cta-container {
+        padding: 20px 16px;
+        margin-top: 20px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 340px;
+        padding: 12px 20px;
+        font-size: 15px;
     }
 }
